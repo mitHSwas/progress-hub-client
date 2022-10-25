@@ -1,0 +1,55 @@
+.logo-img {
+    width: 150px;
+}
+
+.navbar {
+    margin-bottom: 50px;
+}
+
+.navbar .container {
+    background-color: #fcf9f9;
+    border-radius: 8px;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+        0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand img {
+    padding-top: 0;
+}
+
+.nav-item a {
+    text-decoration: none;
+    margin-left: 50px;
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #999696;
+}
+
+.active {
+    background-color: #c1eec1;
+    padding: 5px 10px;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width: 576px) {
+    .navbar-brand a {
+        font-size: 32px
+    }
+
+    .nav-item a {
+        margin-left: 10px;
+        padding: 3px 7px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-item a {
+        margin-left: 20px;
+    }
+
+    .navbar {
+        margin-bottom: 40px;
+    }
+}
