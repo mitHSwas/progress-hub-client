@@ -1,10 +1,13 @@
 import React from 'react';
+import { useContext } from 'react';
 import { Button, Container, Image, Nav, Navbar } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import Logo from "../../assets/images/logo/logo.jpg";
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import './Header.css'
 
 const Header = () => {
+    const { user } = useContext(AuthContext);
     return (
         <div>
             <Navbar>
@@ -23,8 +26,16 @@ const Header = () => {
                             <NavLink className={({ isActive }) => isActive ? "active" : undefined} to='/questions'>FAQ</NavLink>
                         </Nav.Item>
                         <Nav.Item>
-                            <Link to="/login"><Button variant="primary">Sign in</Button></Link>
-                            <Link className="register" to="/register"><Button variant="warning">Sign up</Button></Link>
+                            {
+                                user?.uid ?
+                                    <>
+                                        <Image roundedCircle className="profile-img" src={user?.photoURL}></Image>
+                                    </> :
+                                    <>
+                                        <Link to="/login"><Button variant="primary">Sign In</Button></Link>
+                                        <Link className="register" to="/register"><Button variant="warning">Sign Up</Button></Link>
+                                    </>
+                            }
                         </Nav.Item>
                     </Navbar.Collapse>
                 </Container>

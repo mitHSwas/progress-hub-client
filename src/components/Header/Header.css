@@ -37,6 +37,16 @@
     vertical-align: middle;
 }
 
+.profile-img {
+    width: 40px;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.tooltip {
+    /* border: none; */
+}
+
 @media only screen and (max-width: 576px) {
     .navbar-brand a {
         font-size: 32px
