@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Image, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Image, Nav, Navbar } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import Logo from "../../assets/images/logo/logo.jpg";
 import './Header.css'
@@ -14,13 +14,17 @@ const Header = () => {
                     </Navbar.Brand>
                     <Navbar.Collapse className="justify-content-end">
                         <Nav.Item >
-                            <NavLink className={({ isActive }) => isActive ? "active" : undefined} to='/home'>Home</NavLink>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <NavLink className={({ isActive }) => isActive ? "active" : undefined} to='/statistics'>Statistics</NavLink>
+                            <NavLink className={({ isActive }) => isActive ? "active" : undefined} to='/courses'>Courses</NavLink>
                         </Nav.Item>
                         <Nav.Item>
                             <NavLink className={({ isActive }) => isActive ? "active" : undefined} to='/blogs'>Blogs</NavLink>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <NavLink className={({ isActive }) => isActive ? "active" : undefined} to='/questions'>FAQ</NavLink>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Link to="/login"><Button variant="primary">Sign in</Button></Link>
+                            <Link className="register" to="/register"><Button variant="warning">Sign up</Button></Link>
                         </Nav.Item>
                     </Navbar.Collapse>
                 </Container>

@@ -1,0 +1,16 @@
+.icon {
+    font-size: 4.5rem;
+    margin: 20px;
+    cursor: pointer;
+    border: 1px solid #bebebe88;
+    padding: 17px;
+    border-radius: 5px;
+}
+
+.facebook {
+    color: #3b5998;
+}
+
+.icon:hover {
+    border: 1px solid #3333b6;
+}

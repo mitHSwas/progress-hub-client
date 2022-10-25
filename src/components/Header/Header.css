@@ -19,11 +19,15 @@
 
 .nav-item a {
     text-decoration: none;
-    margin-left: 50px;
+    margin-left: 30px;
     padding: 5px 10px;
     font-size: 18px;
     font-weight: bold;
     color: #999696;
+}
+
+.register {
+    margin-left: 0 !important
 }
 
 .active {
