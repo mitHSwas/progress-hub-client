@@ -11,11 +11,10 @@ const AllCourse = () => {
             .then(res => res.json())
             .then(data => setAllCourse(data))
     }, [])
-    console.log(allCourse)
     return (
         <div className="courses">
             {
-                allCourse.map(course => <SingleCourse key={course._id} course={course}></SingleCourse>)
+                allCourse.map(course => <SingleCourse key={course.price} course={course}></SingleCourse>)
             }
         </div>
     );

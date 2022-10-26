@@ -1,9 +1,8 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 const SingleCourse = (props) => {
-    const { course_name, _id, picture, about } = props.course;
+    const { course_name, picture, about } = props.course;
     return (
         <div>
             <Card style={{ width: '15rem', height: "25rem" }}>
