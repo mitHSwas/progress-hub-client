@@ -1,7 +1,9 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
+import AllCourse from '../AllCourse/AllCourse';
 import Categories from '../Categories/Categories';
+import "./Courses.css";
 
 const Courses = () => {
     const categories = useLoaderData();
@@ -15,7 +17,7 @@ const Courses = () => {
                     }
                 </Col>
                 <Col lg="9">
-                    Course Overview
+                    <AllCourse></AllCourse>
                 </Col>
             </Row>
         </Container>
