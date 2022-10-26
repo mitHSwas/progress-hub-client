@@ -9,10 +9,12 @@ import "./Register.css";
 import { useContext } from 'react';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import toast from 'react-hot-toast';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
     const { googleSignUp, githubSignUp, facebookSignUp, createUser, updateUserProfile, verifyEmail } = useContext(AuthContext);
-
+    const [accepted, setAccepted] = useState(false);
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
     const facebookProvider = new FacebookAuthProvider();
@@ -110,10 +112,10 @@ const Register = () => {
                         <Form.Label>Password</Form.Label>
                         <Form.Control name="password" type="password" placeholder="Password" required />
                     </Form.Group>
-                    {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                        <Form.Check type="checkbox" label="Check me out" />
-                    </Form.Group> */}
-                    <Button className="w-100 mx-auto" variant="primary" type="submit">
+                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                        <Form.Check onClick={() => setAccepted(!accepted)} type="checkbox" label={<>Accept <Link to="/terms">Terms & Conditions</Link></>} />
+                    </Form.Group>
+                    <Button className="w-100 mx-auto" variant="primary" disabled={!accepted} type="submit">
                         Submit
                     </Button>
                 </Form>

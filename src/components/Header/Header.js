@@ -7,7 +7,10 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import './Header.css'
 
 const Header = () => {
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
+    const handleSignOut = () => {
+        logOut();
+    }
     return (
         <div>
             <Navbar>
@@ -29,6 +32,7 @@ const Header = () => {
                             {
                                 user?.uid ?
                                     <>
+                                        <Link><Button onClick={handleSignOut} variant="danger">Sign Out</Button></Link>
                                         <Image roundedCircle className="profile-img" src={user?.photoURL}></Image>
                                     </> :
                                     <>
