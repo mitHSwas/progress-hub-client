@@ -4,7 +4,6 @@ import Card from 'react-bootstrap/Card';
 
 const CourseDetails = () => {
     const details = useLoaderData();
-    console.log(details)
     const { course_name, about, features, price } = details;
     return (
         <div>
