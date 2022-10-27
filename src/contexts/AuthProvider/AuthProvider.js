@@ -13,21 +13,27 @@ const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
 
     const googleSignUp = (provider) => {
+        setLoading(true);
         return signInWithPopup(auth, provider)
     }
     const githubSignUp = (provider) => {
+        setLoading(true);
         return signInWithPopup(auth, provider)
     }
     const facebookSignUp = (provider) => {
+        setLoading(true);
         return signInWithPopup(auth, provider)
     }
     const createUser = (email, password) => {
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password)
     }
     const updateUserProfile = (profile) => {
+        setLoading(true);
         return updateProfile(auth.currentUser, profile)
     }
     const verifyEmail = () => {
+        setLoading(true);
         return sendEmailVerification(auth.currentUser);
     }
     const signInUser = (email, password) => {
@@ -35,6 +41,7 @@ const AuthProvider = ({ children }) => {
         return signInWithEmailAndPassword(auth, email, password);
     }
     const logOut = () => {
+        setLoading(true);
         return signOut(auth);
     }
 
