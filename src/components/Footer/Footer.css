@@ -1,0 +1,15 @@
+.footer {
+    background-color: #fcf9f9;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.f-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 10px;
+}

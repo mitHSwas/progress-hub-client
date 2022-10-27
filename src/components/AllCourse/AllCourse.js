@@ -7,7 +7,7 @@ import "./AllCourse.css"
 const AllCourse = () => {
     const [allCourse, setAllCourse] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5000/courses")
+        fetch("https://progress-hub-server.vercel.app/courses")
             .then(res => res.json())
             .then(data => setAllCourse(data))
     }, [])

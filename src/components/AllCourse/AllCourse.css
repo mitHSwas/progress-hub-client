@@ -3,3 +3,21 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
 }
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .courses {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        vertical-align: middle;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-device-width : 360px) and (max-device-width : 640px) {
+    .courses {
+        display: grid;
+        grid-template-columns: 1fr;
+        vertical-align: middle;
+        align-items: center;
+    }
+}

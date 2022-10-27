@@ -1,20 +1,9 @@
 import React from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
+import { useLoaderData } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
-import { useState } from 'react';
-import { useEffect } from 'react';
 
 const CourseDetails = () => {
-    const [details, setDetails] = useState([]);
-    const { id } = useParams();
-    console.log(id)
-    useEffect(() => {
-        const url = `http://localhost:5000/courseDetails/${id}`;
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setDetails(data))
-    }, [])
+    const details = useLoaderData();
     console.log(details)
     const { course_name, about, features, price } = details;
     return (

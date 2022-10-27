@@ -17,6 +17,7 @@ const Courses = () => {
                     }
                 </Col>
                 <Col lg="9">
+                    <h1 className="text-center">Our all Courses:</h1>
                     <AllCourse></AllCourse>
                 </Col>
             </Row>

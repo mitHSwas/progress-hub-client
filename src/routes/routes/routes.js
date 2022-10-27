@@ -24,16 +24,17 @@ export const router = createBrowserRouter([
             {
                 path: "/courses",
                 element: <Courses></Courses>,
-                loader: () => fetch("http://localhost:5000/category")
+                loader: () => fetch("https://progress-hub-server.vercel.app/category")
             },
             {
                 path: "/courseDetails/:id",
-                element: <PrivateRoute><CourseDetails></CourseDetails></PrivateRoute>
+                element: <PrivateRoute><CourseDetails></CourseDetails></PrivateRoute>,
+                loader: ({ params }) => fetch(`https://progress-hub-server.vercel.app/courseDetails/${params.id}`)
             },
             {
                 path: "/category/:id",
                 element: <CoursesDetails></CoursesDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`)
+                loader: ({ params }) => fetch(`https://progress-hub-server.vercel.app/category/${params.id}`)
             },
             {
                 path: "/blogs",

@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import { useLocation, useNavigate } from 'react-router-dom';
+import "./Login.css"
 
 const Login = () => {
 
@@ -34,7 +35,7 @@ const Login = () => {
             })
     }
     return (
-        <div>
+        <div className="login">
             <h1 className="text-center text-primary mb-4">Please log in to continue</h1>
             <Form onSubmit={handleSubmit} className="w-50 mx-auto">
                 <Form.Group className="mb-3" controlId="formBasicEmail">

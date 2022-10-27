@@ -4,6 +4,7 @@ import Card from 'react-bootstrap/Card';
 const Blogs = () => {
     return (
         <div className="blog">
+            <h1 className="text-center mb-4">Our Blogs Are Here: </h1>
             <Card className="mb-5">
                 <Card.Header>
                     <h5>Question: What is cors?</h5>
